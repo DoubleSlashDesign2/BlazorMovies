@@ -22,7 +22,8 @@ else
 
     @foreach (var movie in MoviesList)
     {
-        <IndiviualMovie Movie="movie" DisplayButtons="displayButtons"/>
+        <IndiviualMovie Movie="movie" DisplayButtons="displayButtons" 
+                        DeleteMovie="DeleteMovie"/>
     }
 
 
@@ -33,5 +34,9 @@ else
     [Parameter] public List<Movie> MoviesList { get; set; }
     bool displayButtons = true;  // show checkbok to be checked(its data bound)
 
-
+    //-- Invoked using delegate EventCallback
+    void DeleteMovie(Movie movie)
+    {
+        MoviesList.Remove(movie);
+    }
 }
