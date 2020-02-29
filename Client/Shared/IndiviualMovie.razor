@@ -3,8 +3,16 @@
 <div>
     <p>Title: <b>@Movie.Title</b></p>
     <p>Release Date: <b>@Movie.ReleaseDate.ToString("dd MMM yyyy")</b></p>
+    <div>
+        <button @onclick="Delete">Delete</button>
+    </div>
 </div>
 
 @code {
     [Parameter] public Movie Movie { get; set; }
+
+    void Delete()
+    {
+        Console.WriteLine($"Deleting {Movie.Title}");
+    }
 }
