@@ -1,15 +1,22 @@
 ﻿
 
-<div>
-    <p>Title: <b>@Movie.Title</b></p>
-    <p>Release Date: <b>@Movie.ReleaseDate.ToString("dd MMM yyyy")</b></p>
     <div>
-        <button @onclick="Delete">Delete</button>
+        <p>Title: <b>@Movie.Title</b></p>
+        <p>Release Date: <b>@Movie.ReleaseDate.ToString("dd MMM yyyy")</b></p>
+        @if (DisplayButtons)
+        {
+            <div>
+
+                <button @onclick="Delete">Delete</button>
+            </div>
+
+        }
     </div>
-</div>
 
 @code {
     [Parameter] public Movie Movie { get; set; }
+    [Parameter] public bool DisplayButtons { get; set; } = false;
+
 
     void Delete()
     {
