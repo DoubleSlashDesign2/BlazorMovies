@@ -92,3 +92,7 @@ D:\Dev-Blazor\BlazorMovies\Client\obj\Debug\netstandard2.1\BlazorMovies.Client.p
 D:\Dev-Blazor\BlazorMovies\Client\obj\Debug\netstandard2.1\blazor\linker.descriptor.xml
 D:\Dev-Blazor\BlazorMovies\Client\obj\Debug\netstandard2.1\blazor\linker.typegranularityconfig.xml
 D:\Dev-Blazor\BlazorMovies\Client\obj\Debug\netstandard2.1\blazor\blazor.boot.json
+D:\Dev-Blazor\BlazorMovies\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MovieList.razor.g.cs
+D:\Dev-Blazor\BlazorMovies\Client\obj\Debug\netstandard2.1\Razor\Shared\MovieList.razor.g.cs
+D:\Dev-Blazor\BlazorMovies\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\IndiviualMovie.razor.g.cs
+D:\Dev-Blazor\BlazorMovies\Client\obj\Debug\netstandard2.1\Razor\Shared\IndiviualMovie.razor.g.cs

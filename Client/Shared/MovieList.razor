@@ -1,0 +1,34 @@
+﻿
+
+@if (MoviesList == null)
+{
+    <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+    <!--
+    <img src="https://img.izismile.com/img/img7/20140529/1000/seriously_trippy_gifs_15.gif" alt="Alternate Text" />
+    <img src="https://cdn.dribbble.com/users/15805/screenshots/726800/attachments/69019/shindig-loading-animation.gif" alt="Alternate Text" />
+
+
+        -->
+
+}
+else if (MoviesList.Count == 0)
+{
+    <text>There are no movies to display</text>
+}
+else
+{
+    @foreach (var movie in MoviesList)
+    {
+        <IndiviualMovie Movie="movie"/>
+    }
+
+
+
+}
+
+@code {
+    [Parameter] public List<Movie> MoviesList { get; set; }
+
+
+
+}

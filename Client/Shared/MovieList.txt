@@ -1,0 +1,46 @@
+﻿
+
+@if (moviesList == null)
+{
+    <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+    <!--
+    <img src="https://img.izismile.com/img/img7/20140529/1000/seriously_trippy_gifs_15.gif" alt="Alternate Text" />
+    <img src="https://cdn.dribbble.com/users/15805/screenshots/726800/attachments/69019/shindig-loading-animation.gif" alt="Alternate Text" />
+
+
+        -->
+
+}
+else if (moviesList.Count == 0)
+{
+    <text>There are no movies to display</text>
+}
+else
+{
+    @foreach (var movie in moviesList)
+    {
+        <p>Title: <b>@movie.Title</b></p>
+        <p>Release Date: <b>@movie.ReleaseDate.ToString("dd MMM yyyy")</b></p>
+    }
+
+
+
+}
+
+@code {
+    List<Movie> moviesList;
+
+    //protected async override Task OnInitializedAsync()
+    protected override void OnInitialized()
+    {
+
+        //await Task.Delay(3000);
+
+        moviesList = new List<Movie>()
+{
+            new Movie(){Title="Spider-Man: Far from home", ReleaseDate=new DateTime(2019,7,2)},
+            new Movie(){Title="Moana", ReleaseDate=new DateTime(2016,11,23)},
+            new Movie(){Title="Inception", ReleaseDate=new DateTime(2010,7,16)}
+    };
+    }
+}

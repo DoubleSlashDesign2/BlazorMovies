@@ -58,6 +58,20 @@ using BlazorMovies.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "D:\Dev-Blazor\BlazorMovies\Client\_Imports.razor"
+using BlazorMovies.Client.Helpers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "D:\Dev-Blazor\BlazorMovies\Client\_Imports.razor"
+using BlazorMovies.Shared.Entities;
+
+#line default
+#line hidden
+#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998

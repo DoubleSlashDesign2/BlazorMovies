@@ -1,0 +1,141 @@
+﻿@page "/"
+//------------ Before  Async
+
+<h1>Hello, @StringUtilities.CustomToUpper(name)</h1>
+
+<p>Lets add 2+2 = @(2 + 2)</p>
+
+<button @onclick="@WriteInLog">Click Me</button>
+
+<div>
+    <h3>Movies List</h3>
+    @foreach (var movie in moviesList)
+    {
+        <p>Title: <b>@movie.Title</b></p>
+        <p>Release Date: <b>@movie.ReleaseDate.ToString("dd MMM yyyy")</b></p>
+    }
+
+    @for (var i = 0; i < moviesList.Count; i++)
+    {
+        <div style='background-color: @(i %2==0 ? "blue" : "red" )'>
+
+            <p>Title: <b>@moviesList[i].Title</b></p>
+            <p>Release Date: <b>@moviesList[i]ReleaseDate.ToString("dd MMM yyyy")</b></p>
+        </div>
+
+    }
+
+
+</div>
+
+
+
+@code{
+    string name = "Larry";
+
+    List<Movie> moviesList;
+
+    protected override void OnInitialized()
+    {
+        moviesList = new List<Movie>()
+{
+            new Movie(){Title="Spider-Man: Far from home", ReleaseDate=new DateTime(2019,7,2)},
+            new Movie(){Title="Moana", ReleaseDate=new DateTime(2016,11,23)},
+            new Movie(){Title="Inception", ReleaseDate=new DateTime(2010,7,16)}
+        };
+    }
+
+
+
+    Movie spiderman = new Movie()
+    {
+        Title = "Spider-Man: Far From Home",
+        ReleaseDate = new DateTime(2019, 7, 2)
+    };
+
+    void WriteInLog()
+    {
+        //alert("Ive been clicked (from method)")
+        //Console.WriteLine("Ive been clicked (from method)");
+    }
+}
+
+//------------  After Async
+//------------  After Async Loading waiting 3 seconds - web assembly - very cool
+//------------  After Async - Also using @MarkupString() Cast
+@page "/"
+
+
+<h1>Hello, @StringUtilities.CustomToUpper(name)</h1>
+
+<p>Lets add 2+2 = @(2 + 2)</p>
+
+<button @onclick="@WriteInLog">Click Me</button>
+
+<div>
+    <h3>Movies List</h3>
+
+    @if (moviesList == null)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        @foreach (var movie in moviesList)
+        {
+            <p>Title: @((MarkupString)@movie.Title)</p>
+            <p>Release Date: <b>@movie.ReleaseDate.ToString("dd MMM yyyy")</b></p>
+        }
+
+        @for (var i = 0; i < moviesList.Count; i++)
+        {
+            <div style='background-color: @(i %2==0 ? "blue" : "red" )'>
+
+                <p>Title: <b>@moviesList[i].Title</b></p>
+                <p>Release Date: <b>@moviesList[i]ReleaseDate.ToString("dd MMM yyyy")</b></p>
+            </div>
+
+        }
+
+
+    }
+
+</div>
+
+
+
+@code{
+    string name = "Larry";
+
+    List<Movie> moviesList;
+
+    protected async override Task OnInitializedAsync()
+    {
+        await Task.Delay(3000);
+
+        moviesList = new List<Movie>()
+{
+            new Movie(){Title="<b>Spider-Man: Far from home</b>", ReleaseDate=new DateTime(2019,7,2)},
+            new Movie(){Title="<i>Moana</i>", ReleaseDate=new DateTime(2016,11,23)},
+            new Movie(){Title="Inception", ReleaseDate=new DateTime(2010,7,16)}
+        };
+    }
+
+
+
+    Movie spiderman = new Movie()
+    {
+        Title = "Spider-Man: Far From Home",
+        ReleaseDate = new DateTime(2019, 7, 2)
+    };
+
+    void WriteInLog()
+    {
+        //alert("Ive been clicked (from method)")
+        //Console.WriteLine("Ive been clicked (from method)");
+    }
+}
+
+//------------  After Components
+//------------  After Components 
+//------------  After Components 

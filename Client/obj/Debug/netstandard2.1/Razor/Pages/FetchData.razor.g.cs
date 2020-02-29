@@ -59,6 +59,20 @@ using BlazorMovies.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 9 "D:\Dev-Blazor\BlazorMovies\Client\_Imports.razor"
+using BlazorMovies.Client.Helpers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "D:\Dev-Blazor\BlazorMovies\Client\_Imports.razor"
+using BlazorMovies.Shared.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\Dev-Blazor\BlazorMovies\Client\Pages\FetchData.razor"
 using BlazorMovies.Shared;
 
