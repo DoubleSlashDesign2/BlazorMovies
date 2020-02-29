@@ -5,7 +5,9 @@
 <p>Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
+<br/>
+<input type="number" @bind="currentCount" />
+<br />
 <MovieList MoviesList="movieLists" />
 
 @code {
@@ -24,10 +26,6 @@
         };
 
     }
-
-
-
-
 
     private int currentCount = 0;
 

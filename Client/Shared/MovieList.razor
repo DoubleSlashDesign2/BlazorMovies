@@ -18,7 +18,7 @@ else if (MoviesList.Count == 0)
 else
 {
 
-    <input type="checkbox" @onchange="@(() => displayButtons=!displayButtons)" />
+    <input type="checkbox" @bind="@displayButtons" />
 
     @foreach (var movie in MoviesList)
     {
@@ -31,7 +31,7 @@ else
 
 @code {
     [Parameter] public List<Movie> MoviesList { get; set; }
-    bool displayButtons = false;
+    bool displayButtons = true;  // show checkbok to be checked(its data bound)
 
 
 }
