@@ -6,9 +6,14 @@
 
     <MovieList MoviesList="movieLists">
         <!-- This is the child contents and it gets assigned in the MoviesList.razor file-->
-
-        <span style="color:red">This is Loading...</span>
-        <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+        <NullTemplate>
+            <span style="color:red">Null Template This is Loading...</span>
+            <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+        </NullTemplate>
+        <EmptyTemplate>
+            <span style="color:red">Empty Template This is Loading...</span>
+            <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+        </EmptyTemplate>
     </MovieList>
 
 </div>
@@ -17,7 +22,8 @@
 
 @code{
 
-    private List<Movie> movieLists;
+    //private List<Movie> movieLists; // Causes Null template or null template tag helper to display
+    private List<Movie> movieLists = new List<Movie>(); // Causes Empty template or Empty template tag helper to display
 
     protected async override Task OnInitializedAsync()
     //protected override void OnInitialized()
