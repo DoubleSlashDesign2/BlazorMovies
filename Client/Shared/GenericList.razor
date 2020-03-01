@@ -1,0 +1,50 @@
+﻿@typeparam TItem
+
+@if (Lists == null)
+{
+
+    <!--
+    <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+    -->
+    if (NullTemplate != null)
+    {
+        @NullTemplate
+    }
+    else
+    {
+        // -- looks like we have null content ( no content passed between MovieList Tag Helper )
+        <text>Default content no Null Template TagHeper passed between MovieList Tag Helper</text>
+    }
+}
+else if (Lists.Count == 0)
+{
+    if (EmptyTemplate != null)
+    {
+        @EmptyTemplate
+    }
+    else
+    {
+        // Default Content
+        <text> Default content no Empty Template Tag Helper there are no records to show</text>
+    }
+}
+else
+{
+
+
+    @foreach (var element in Lists)
+    {
+
+        @ElementTemplate(element)
+    }
+
+
+
+}
+@code {
+    [Parameter] public RenderFragment NullTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment EmptyTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment<TItem> ElementTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+
+    [Parameter] public List<TItem> Lists { get; set; }
+}

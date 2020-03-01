@@ -1,51 +1,17 @@
 ﻿
 
-@if (MoviesList == null)
-{
+<input type="checkbox" @bind="@displayButtons" />
 
-    <!--
-    <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
-    -->
-    if (NullTemplate != null)
-    {
-        @NullTemplate
-    }
-    else
-    {
-        // -- looks like we have null content ( no content passed between MovieList Tag Helper )
-        <text>Default content no Null Template TagHeper passed between MovieList Tag Helper</text>
-    }
-}
-else if (MoviesList.Count == 0)
-{
-    if (EmptyTemplate != null)
-    {
-        @EmptyTemplate
-    }
-    else
-    {
-        // Default Content
-        <text> Default content no Empty Template Tag Helper there are no records to show</text>
-    }
-}
-else
-{
 
-    <input type="checkbox" @bind="@displayButtons" />
-
-    @foreach (var movie in MoviesList)
-    {
+<GenericList Lists="MoviesList">
+    <ElementTemplate Context="movie">
         <IndiviualMovie Movie="movie" DisplayButtons="displayButtons" DeleteMovie="DeleteMovie" />
-    }
+    </ElementTemplate>
+</GenericList>
 
-
-
-}
 
 @code {
     [Parameter] public List<Movie> MoviesList { get; set; }
-    [Parameter] public RenderFragment NullTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
-    [Parameter] public RenderFragment EmptyTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
 
 
     //[Parameter] public RenderFragment ChildContent { get; set; } // if you only have 1 RenderFragement use ChildContent ( its built in )
