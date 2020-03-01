@@ -5,19 +5,25 @@
 <p>Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-<br/>
+<br />
 <input type="number" @bind="currentCount" />
 <br />
-<MovieList MoviesList="movieLists" />
+<MovieList MoviesList="movieLists">
+    <!-- This is the child contents and it gets assigned in the MoviesList.razor file-->
+
+    <span style="color:red">This is Loading...</span>
+    <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+</MovieList>
+
 
 @code {
 
     private List<Movie> movieLists;
 
-    //protected async override Task OnInitializedAsync()
-    protected override void OnInitialized()
+    protected async override Task OnInitializedAsync()
+    //protected override void OnInitialized()
     {
-        //await Task.Delay(3000);
+        await Task.Delay(3000);
 
         movieLists = new List<Movie>(){
             new Movie() { Title = "joker", ReleaseDate = new DateTime(2019, 7, 2)},

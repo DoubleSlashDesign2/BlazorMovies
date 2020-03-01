@@ -2,13 +2,12 @@
 
 @if (MoviesList == null)
 {
-    <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+
+
+    @ChildContent
     <!--
-    <img src="https://img.izismile.com/img/img7/20140529/1000/seriously_trippy_gifs_15.gif" alt="Alternate Text" />
-    <img src="https://cdn.dribbble.com/users/15805/screenshots/726800/attachments/69019/shindig-loading-animation.gif" alt="Alternate Text" />
-
-
-        -->
+    <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+    -->
 
 }
 else if (MoviesList.Count == 0)
@@ -22,8 +21,8 @@ else
 
     @foreach (var movie in MoviesList)
     {
-        <IndiviualMovie Movie="movie" DisplayButtons="displayButtons" 
-                        DeleteMovie="DeleteMovie"/>
+        <IndiviualMovie Movie="movie" DisplayButtons="displayButtons"
+                        DeleteMovie="DeleteMovie" />
     }
 
 
@@ -32,6 +31,8 @@ else
 
 @code {
     [Parameter] public List<Movie> MoviesList { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; } // if you only have 1 row use ChildContent ( its built in )
+
     bool displayButtons = true;  // show checkbok to be checked(its data bound)
 
     //-- Invoked using delegate EventCallback

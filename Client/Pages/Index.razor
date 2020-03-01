@@ -4,10 +4,12 @@
 <div>
     <h3>Movies List</h3>
 
-    <MovieList MoviesList="movieLists" />
+    <MovieList MoviesList="movieLists">
+        <!-- This is the child contents and it gets assigned in the MoviesList.razor file-->
 
-
-
+        <span style="color:red">This is Loading...</span>
+        <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
+    </MovieList>
 
 </div>
 
@@ -17,12 +19,12 @@
 
     private List<Movie> movieLists;
 
-    //protected async override Task OnInitializedAsync()
-    protected override void OnInitialized()
+    protected async override Task OnInitializedAsync()
+    //protected override void OnInitialized()
     {
-        //await Task.Delay(3000);
+        await Task.Delay(3000);
 
-            movieLists = new List<Movie>(){
+        movieLists = new List<Movie>(){
             new Movie() { Title = "Spider-Man: Far from home", ReleaseDate = new DateTime(2019, 7, 2)},
             new Movie() { Title = "Moana", ReleaseDate = new DateTime(2016, 11, 23)},
             new Movie() { Title = "Inception", ReleaseDate = new DateTime(2010, 7, 16)}
