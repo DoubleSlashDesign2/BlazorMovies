@@ -3,27 +3,31 @@
 @if (MoviesList == null)
 {
 
-
-    @ChildContent
     <!--
     <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Alternate Text" />
     -->
-
+    if (ChildContent != null)
+    { @ChildContent }
+else
+{
+    // -- looks like we have null content ( no content passed between MovieList Tag Helper )
+    <text>No Default content passed between MovieList Tag Helper</text>
+}
 }
 else if (MoviesList.Count == 0)
 {
-    <text>There are no movies to display</text>
+<text>There are no movies to display</text>
 }
 else
 {
 
-    <input type="checkbox" @bind="@displayButtons" />
+<input type="checkbox" @bind="@displayButtons" />
 
-    @foreach (var movie in MoviesList)
-    {
-        <IndiviualMovie Movie="movie" DisplayButtons="displayButtons"
-                        DeleteMovie="DeleteMovie" />
-    }
+@foreach (var movie in MoviesList)
+{
+    <IndiviualMovie Movie="movie" DisplayButtons="displayButtons"
+                    DeleteMovie="DeleteMovie" />
+}
 
 
 
@@ -31,7 +35,7 @@ else
 
 @code {
     [Parameter] public List<Movie> MoviesList { get; set; }
-    [Parameter] public RenderFragment ChildContent { get; set; } // if you only have 1 row use ChildContent ( its built in )
+    [Parameter] public RenderFragment ChildContent { get; set; } // if you only have 1 RenderFragement use ChildContent ( its built in )
 
     bool displayButtons = true;  // show checkbok to be checked(its data bound)
 
