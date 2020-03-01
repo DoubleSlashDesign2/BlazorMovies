@@ -24,4 +24,25 @@
     {
         MoviesList.Remove(movie);
     }
+    protected override void OnInitialized()
+    {
+        Console.WriteLine(@"OnInitialized. Movies.Count = {0}", MoviesList.Count);
+    }
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine(@"OnParametersSet. Movies.Count = {0}", MoviesList.Count);
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Console.WriteLine(@"OnAfterRender. Movies.Count = {0} firstRender={1}", MoviesList.Count, firstRender);
+    }
+    protected override bool ShouldRender()
+    {
+        // Yes should re-render every time
+        // -- If you set this to no then the Dynamic @razor code will not re-fire again
+        return true;  
+    }
+
+
+
 }

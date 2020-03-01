@@ -1,0 +1,23 @@
+﻿Life Cycle of a Component
+
+OnInitialized and OnInitializedAsync
+   Here we could trigger an http request to get the data from the server to be displayed.
+--Executed only once - that is when the component loads
+
+OnParametersSet and OnParametersSetAsync
+   Are executed when the component has received all parameters and the values have been
+   assigned to their properties.
+ --These methods are executed everytime the parameters are updated
+
+OnAfterRender and OnAfterRenderAsync
+  Are execured when components are rendered and the html is already displayed on in the browser
+  you can put code here to work with javascript libiries and html elements
+--Executed after each time it rendered
+
+ShouldRender
+  We use should render to indicate if we want a componet to ( re-fire the OnAfterRender )
+  after its initial render (ie. if it gets re-rendered by a javascript libs)
+
+
+
+
