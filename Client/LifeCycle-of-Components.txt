@@ -19,5 +19,18 @@ ShouldRender
   after its initial render (ie. if it gets re-rendered by a javascript libs)
 
 
+Dependency Injection
+-- we are given 3 injected services in blazor by default - dont have to configure - there by defaults
+  HttpClient - used to makehttp request to a server
+  IJSRuntime - is used to work with Javascript
+  NavigationManger - Allows us to work with the users navigation from our code
+
+  There are 3 lifecycles of a service types
+  -- Scoped: lives within a context ( like during an http request)
+  -- Singleton: Single instance of a service - same instances used forever
+  -- Transient: Different instances of the service are created each time that a service is requested
+
+
+
 
 
