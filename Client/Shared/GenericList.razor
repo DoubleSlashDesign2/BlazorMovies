@@ -1,4 +1,6 @@
-﻿@typeparam TItem
+﻿
+<!-- // typeparam  makes the component generic -->
+@typeparam TItem
 
 @if (Lists == null)
 {
@@ -13,6 +15,7 @@
     else
     {
         // -- looks like we have null content ( no content passed between MovieList Tag Helper )
+        // --
         <text>Default content no Null Template TagHeper passed between MovieList Tag Helper</text>
     }
 }
@@ -24,7 +27,7 @@ else if (Lists.Count == 0)
     }
     else
     {
-        // Default Content
+        // Default Content - when we have a empty list that is initialized with new
         <text> Default content no Empty Template Tag Helper there are no records to show</text>
     }
 }
@@ -34,7 +37,6 @@ else
 
     @foreach (var element in Lists)
     {
-
         @ElementTemplate(element)
     }
 
@@ -44,7 +46,9 @@ else
 @code {
     [Parameter] public RenderFragment NullTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
     [Parameter] public RenderFragment EmptyTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+
+    [Parameter] public List<TItem> Lists { get; set; }  // Usedwith @typeparam TItem at the top to make the component generic
     [Parameter] public RenderFragment<TItem> ElementTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
 
-    [Parameter] public List<TItem> Lists { get; set; }
+
 }
