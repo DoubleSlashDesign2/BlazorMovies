@@ -42,16 +42,28 @@
 
     protected override void OnInitialized()
     {
-        //Console.WriteLine(@"OnInitialized. Movies.Count = {0}", MoviesList.Count);
+        if(MoviesList == null)
+            Console.WriteLine(@"OnInitialized. Movies.Count = {0}", "Movies is null");
+        else
+            Console.WriteLine(@"OnInitialized. Movies.Count = {0}", MoviesList.Count.ToString());
     }
+
     protected override void OnParametersSet()
     {
-        //Console.WriteLine(@"OnParametersSet. Movies.Count = {0}", MoviesList.Count);
+        if (MoviesList == null)
+            Console.WriteLine(@"OnParametersSet. Movies.Count = {0}", "Movies is null");
+        else
+            Console.WriteLine(@"OnParametersSet. Movies.Count = {0}", MoviesList.Count.ToString());
     }
+
     protected override void OnAfterRender(bool firstRender)
     {
-        //Console.WriteLine(@"OnAfterRender. Movies.Count = {0} firstRender={1}", MoviesList.Count, firstRender);
+        if (MoviesList == null)
+            Console.WriteLine(@"OnAfterRender. Movies.Count =  Movies is null firstRender={0}", firstRender);
+        else
+            Console.WriteLine(@"OnAfterRender. Movies.Count = {0} firstRender={1}", MoviesList.Count, firstRender);
     }
+
     protected override bool ShouldRender()
     {
         // Yes should re-render every time
