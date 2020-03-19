@@ -1,5 +1,6 @@
 ﻿using BlazorMovies.Shared.Entities;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace BlazorMovies.Client.Pages
         // -- [Inject] attribute and make the item a property to accomplish the same as in the razor pages
         [Inject] SingletonService singleton { get; set; } 
         [Inject] TransientService transient { get; set; }
+        [Inject] IJSRuntime js { get; set; }
 
         private List<Movie> movieLists;
 
@@ -32,12 +34,23 @@ namespace BlazorMovies.Client.Pages
         }
 
         private int currentCount = 0;
+        private static int currentCountStatic = 0;
 
-        private void IncrementCount()
+        private async Task  IncrementCount()
         {
             currentCount++;
+            currentCountStatic++;
             transient.Value = currentCount;
             singleton.Value = currentCount;
+
+            // -- This calls a javasctipt function and that JS function calls the C# GetCurrentCount() function below
+            await js.InvokeVoidAsync("dotnetStaticInvocation"); 
+        }
+
+        [JSInvokable]
+        public static Task<int> GetCurrentCount() // accessible from javascript
+        {
+            return Task.FromResult(currentCountStatic);
         }
 
     }
