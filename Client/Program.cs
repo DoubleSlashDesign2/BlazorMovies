@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.AspNetCore.Blazor.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
+using BlazorMovies.Client.Helpers;
+
 namespace BlazorMovies.Client
 {
     public class Program
@@ -25,6 +27,7 @@ namespace BlazorMovies.Client
             services.AddOptions(); // Used for - Authorization System 
             services.AddSingleton<SingletonService>();  // From Services.cs file I created
             services.AddTransient<TransientService>();  // From Services.cs file I created
+            services.AddTransient<IRepository, RepositoryInMemory>();  // 
         }
 
     }
