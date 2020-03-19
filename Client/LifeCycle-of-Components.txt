@@ -32,6 +32,8 @@ Dependency Injection
   -- Transient: Different instances of the service are created each time that a service is requested
 
 
-
+  When injecting Javascript 
+  on the client side you can serve you javascipt by adding it to the index.html file
+  on the server-side you have use the file named _host.cshtml
 
 
