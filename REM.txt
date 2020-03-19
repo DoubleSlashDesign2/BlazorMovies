@@ -1,0 +1,137 @@
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .gitignore
+	modified:   .vs/BlazorMovies/DesignTimeBuild/.dtbcache
+	modified:   .vs/BlazorMovies/config/applicationhost.config
+	modified:   .vs/BlazorMovies/v16/.suo
+	modified:   .vs/BlazorMovies/v16/Server/sqlite3/storage.ide
+	deleted:    .vs/BlazorMovies/v16/Server/sqlite3/storage.ide-shm
+	deleted:    .vs/BlazorMovies/v16/Server/sqlite3/storage.ide-wal
+	modified:   Client/bin/Debug/netstandard2.1/BlazorMovies.Client.blazor.config
+	modified:   Client/bin/Debug/netstandard2.1/BlazorMovies.Client.dll
+	modified:   Client/bin/Debug/netstandard2.1/BlazorMovies.Client.pdb
+	modified:   Client/bin/Debug/netstandard2.1/BlazorMovies.Shared.dll
+	modified:   Client/bin/Debug/netstandard2.1/BlazorMovies.Shared.pdb
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/BlazorMovies.Client.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/BlazorMovies.Client.pdb
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/BlazorMovies.Shared.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/BlazorMovies.Shared.pdb
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.AspNetCore.Blazor.HttpClient.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.AspNetCore.Blazor.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.AspNetCore.Components.Web.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.AspNetCore.Components.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.Extensions.Configuration.Abstractions.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.Extensions.Configuration.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.Extensions.DependencyInjection.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.Extensions.Logging.Abstractions.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/Microsoft.Extensions.Primitives.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/System.Core.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/System.Net.Http.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/System.Runtime.CompilerServices.Unsafe.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/System.Text.Encodings.Web.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/System.Text.Json.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/System.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/WebAssembly.Bindings.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/WebAssembly.Net.Http.dll
+	modified:   Client/bin/Debug/netstandard2.1/dist/_framework/_bin/mscorlib.dll
+	modified:   Client/obj/BlazorMovies.Client.csproj.nuget.cache
+	modified:   Client/obj/BlazorMovies.Client.csproj.nuget.dgspec.json
+	modified:   Client/obj/BlazorMovies.Client.csproj.nuget.g.props
+	modified:   Client/obj/Debug/netstandard2.1/BlazorMovies.Client.RazorComponent.input.cache
+	modified:   Client/obj/Debug/netstandard2.1/BlazorMovies.Client.RazorCoreGenerate.cache
+	modified:   Client/obj/Debug/netstandard2.1/BlazorMovies.Client.TagHelpers.output.cache
+	modified:   Client/obj/Debug/netstandard2.1/BlazorMovies.Client.assets.cache
+	modified:   Client/obj/Debug/netstandard2.1/BlazorMovies.Client.csproj.FileListAbsolute.txt
+	modified:   Client/obj/Debug/netstandard2.1/BlazorMovies.Client.csprojAssemblyReference.cache
+	modified:   Client/obj/Debug/netstandard2.1/BlazorMovies.Client.dll
+	modified:   Client/obj/Debug/netstandard2.1/BlazorMovies.Client.pdb
+	modified:   Client/obj/Debug/netstandard2.1/Razor/App.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/Razor/Pages/Counter.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/Razor/Pages/FetchData.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/Razor/Pages/Index.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/Razor/Shared/IndiviualMovie.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/Razor/Shared/MainLayout.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/Razor/Shared/MovieList.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/Razor/Shared/NavMenu.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/Razor/Shared/SurveyPrompt.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/Razor/_Imports.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/App.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/BlazorMovies.Client.dll
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/BlazorMovies.Client.pdb
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/Pages/Counter.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/Pages/FetchData.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/Pages/Index.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/Shared/IndiviualMovie.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/Shared/MainLayout.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/Shared/MovieList.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/Shared/NavMenu.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/Shared/SurveyPrompt.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/RazorDeclaration/_Imports.razor.g.cs
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/BlazorMovies.Client.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/BlazorMovies.Client.pdb
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/BlazorMovies.Shared.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/BlazorMovies.Shared.pdb
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.AspNetCore.Blazor.HttpClient.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.AspNetCore.Blazor.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.AspNetCore.Components.Web.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.AspNetCore.Components.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.Extensions.Configuration.Abstractions.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.Extensions.Configuration.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.Extensions.DependencyInjection.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.Extensions.Logging.Abstractions.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/Microsoft.Extensions.Primitives.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/System.Core.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/System.Net.Http.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/System.Runtime.CompilerServices.Unsafe.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/System.Text.Encodings.Web.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/System.Text.Json.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/System.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/WebAssembly.Bindings.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/WebAssembly.Net.Http.dll
+	modified:   Client/obj/Debug/netstandard2.1/blazor/linker/mscorlib.dll
+	modified:   Client/obj/project.assets.json
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Client.blazor.config
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Client.dll
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Client.pdb
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Server.deps.json
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Server.dll
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Server.exe
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Server.pdb
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Server.runtimeconfig.dev.json
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Shared.dll
+	modified:   Server/bin/Debug/netcoreapp3.1/BlazorMovies.Shared.pdb
+	modified:   Server/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+	modified:   Server/obj/BlazorMovies.Server.csproj.nuget.cache
+	modified:   Server/obj/BlazorMovies.Server.csproj.nuget.dgspec.json
+	modified:   Server/obj/BlazorMovies.Server.csproj.nuget.g.props
+	modified:   Server/obj/Debug/netcoreapp3.1/BlazorMovies.Server.assets.cache
+	modified:   Server/obj/Debug/netcoreapp3.1/BlazorMovies.Server.csproj.FileListAbsolute.txt
+	modified:   Server/obj/Debug/netcoreapp3.1/BlazorMovies.Server.csprojAssemblyReference.cache
+	modified:   Server/obj/Debug/netcoreapp3.1/BlazorMovies.Server.dll
+	modified:   Server/obj/Debug/netcoreapp3.1/BlazorMovies.Server.exe
+	modified:   Server/obj/Debug/netcoreapp3.1/BlazorMovies.Server.pdb
+	modified:   Server/obj/project.assets.json
+	modified:   Shared/bin/Debug/netstandard2.1/BlazorMovies.Shared.dll
+	modified:   Shared/bin/Debug/netstandard2.1/BlazorMovies.Shared.pdb
+	modified:   Shared/obj/BlazorMovies.Shared.csproj.nuget.cache
+	modified:   Shared/obj/BlazorMovies.Shared.csproj.nuget.dgspec.json
+	modified:   Shared/obj/BlazorMovies.Shared.csproj.nuget.g.props
+	modified:   Shared/obj/Debug/netstandard2.1/BlazorMovies.Shared.assets.cache
+	modified:   Shared/obj/Debug/netstandard2.1/BlazorMovies.Shared.csproj.FileListAbsolute.txt
+	modified:   Shared/obj/Debug/netstandard2.1/BlazorMovies.Shared.dll
+	modified:   Shared/obj/Debug/netstandard2.1/BlazorMovies.Shared.pdb
+	modified:   Shared/obj/project.assets.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Links-Git-Blazor.txt
+	REM.txt
+	sampleVS.gitignore.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")

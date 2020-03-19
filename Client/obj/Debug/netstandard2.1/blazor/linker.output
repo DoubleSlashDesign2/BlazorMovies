@@ -10,6 +10,7 @@ obj\Debug\netstandard2.1\blazor\linker\Microsoft.Extensions.Configuration.dll
 obj\Debug\netstandard2.1\blazor\linker\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 obj\Debug\netstandard2.1\blazor\linker\Microsoft.Extensions.DependencyInjection.dll
 obj\Debug\netstandard2.1\blazor\linker\Microsoft.Extensions.Logging.Abstractions.dll
+obj\Debug\netstandard2.1\blazor\linker\Microsoft.Extensions.Options.dll
 obj\Debug\netstandard2.1\blazor\linker\Microsoft.Extensions.Primitives.dll
 obj\Debug\netstandard2.1\blazor\linker\Microsoft.JSInterop.dll
 obj\Debug\netstandard2.1\blazor\linker\Mono.WebAssembly.Interop.dll

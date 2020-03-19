@@ -1,13 +1,15 @@
 ﻿@page "/"
+@inject SingletonService singleton
 
+    <div>
+        <h3>Movies List</h3>
 
-<div>
-    <h3>Movies List</h3>
+        <p>Singleton count: @singleton.Value</p>
 
-    <!-- Blazor Component -->
-    <MovieList MoviesList="movieLists" />
+        <!-- Blazor Component -->
+        <MovieList MoviesList="movieLists" />
 
-</div>
+    </div>
 
 <button @onclick="AddNewMovie">Add new Movie</button>
 
