@@ -2,19 +2,23 @@
 @inject SingletonService singleton
 @inject IRepository repository
 
-<div>
-    <h3>Movies List</h3>
+    <div>
+        <h3>Movies List</h3>
 
-    <p>Singleton count: @singleton.Value</p>
+        <p>Singleton count: @singleton.Value</p>
 
-    <!-- Blazor Component -->
-    <MovieList MoviesList="movieLists" />
+        <!-- Blazor Component -->
+        @*<MovieList MoviesList="movieLists" />*@
 
-</div>
+        <MovieList  MoviesList="movieLists" />
+
+
+    </div>
 
 <button @onclick="AddNewMovie">Add new Movie</button>
 
 @code{
+
 
     //private List<Movie> movieLists; // Causes Null template or null template tag helper to display
     private List<Movie> movieLists = new List<Movie>(); // Causes Empty template or Empty template tag helper to display
@@ -26,11 +30,11 @@
 
         movieLists = repository.GetMovies();
 
-    //movieLists = new List<Movie>(){
-    //    new Movie() { Title = "Spider-Man: Far from home", ReleaseDate = new DateTime(2019, 7, 2)},
-    //    new Movie() { Title = "Moana", ReleaseDate = new DateTime(2016, 11, 23)},
-    //    new Movie() { Title = "Inception", ReleaseDate = new DateTime(2010, 7, 16)}
-    //};
+        //movieLists = new List<Movie>(){
+        //    new Movie() { Title = "Spider-Man: Far from home", ReleaseDate = new DateTime(2019, 7, 2)},
+        //    new Movie() { Title = "Moana", ReleaseDate = new DateTime(2016, 11, 23)},
+        //    new Movie() { Title = "Inception", ReleaseDate = new DateTime(2010, 7, 16)}
+        //};
 
     }
 

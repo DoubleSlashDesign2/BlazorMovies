@@ -23,8 +23,12 @@
     </ElementTemplate>
 </GenericList>
 
+<ConfirmationComp @ref="confirmation" onCancel="onCancel" onConfirm="onConfirm">
+    <div>Do you wish to delete this movie @movieToBeDeleted.Title?</div>
+</ConfirmationComp>
 
 @code {
+    ConfirmationComp confirmation;
     [Parameter] public List<Movie> MoviesList { get; set; }
 
 
@@ -33,25 +37,51 @@
 
     bool displayButtons = false;  // show checkbok to be checked(its data bound)
 
+    Movie movieToBeDeleted;
+
+
     //-- Invoked using Delegate EventCallback
     //void DeleteMovie(Movie movie)
-    async Task DeleteMovie(Movie movie)
+    private async Task DeleteMovie(Movie movie)
     {
-        //var confirm = await js.InvokeAsync<bool>("confirm", $"Are you sure you want to delete {movie.Title.ToString()}?");
-        await js.MyFunction("Custom message");
-        var confirm = await js.Confirm($"Are you sure you want to delete {movie.Title.ToString()}?");
 
-        if (confirm)
-        {
-            MoviesList.Remove(movie);
+        movieToBeDeleted = movie;
+        confirmation.Show();
 
-        }
+
+        // -- this was calling the javascript confirm - now we using the Blazor Component
+        ////var confirm = await js.InvokeAsync<bool>("confirm", $"Are you sure you want to delete {movie.Title.ToString()}?");
+        //await js.MyFunction("Custom message");
+        //var confirm = await js.Confirm($"Are you sure you want to delete {movie.Title.ToString()}?");
+
+        //if (confirm)
+        //{
+        //    MoviesList.Remove(movie);
+
+        //}
     }
+
+
+    void onConfirm()
+    {
+        MoviesList.Remove(movieToBeDeleted);
+        movieToBeDeleted = null;
+        confirmation.Hide();
+    }
+
+    void onCancel()
+    {
+        confirmation.Hide();
+        movieToBeDeleted = null;
+
+
+    }
+
 
 
     protected override void OnInitialized()
     {
-        if(MoviesList == null)
+        if (MoviesList == null)
             Console.WriteLine(@"OnInitialized. Movies.Count = {0}", "Movies is null");
         else
             Console.WriteLine(@"OnInitialized. Movies.Count = {0}", MoviesList.Count.ToString());

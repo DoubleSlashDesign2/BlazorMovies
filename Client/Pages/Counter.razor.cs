@@ -36,7 +36,16 @@ namespace BlazorMovies.Client.Pages
         private int currentCount = 0;
         private static int currentCountStatic = 0;
 
-        private async Task  IncrementCount()
+
+
+
+
+        /// <summary>
+        /// goning to call this method from javascript - instance invocation
+        /// </summary>
+        /// <returns></returns>
+        [JSInvokable]
+        public  async Task  IncrementCount()
         {
             currentCount++;
             currentCountStatic++;
@@ -47,8 +56,19 @@ namespace BlazorMovies.Client.Pages
             await js.InvokeVoidAsync("dotnetStaticInvocation"); 
         }
 
+
+        private async Task IncrementCountJavascript()
+        {
+            await js.InvokeVoidAsync("dotnetInstanceInvocation",
+                DotNetObjectReference.Create(this)); // could be a reference of another object
+        }
+
+        /// <summary>
+        /// accessible static method from javascript to get static value
+        /// </summary>
+        /// <returns></returns>
         [JSInvokable]
-        public static Task<int> GetCurrentCount() // accessible from javascript
+        public static Task<int> GetCurrentCount() 
         {
             return Task.FromResult(currentCountStatic);
         }

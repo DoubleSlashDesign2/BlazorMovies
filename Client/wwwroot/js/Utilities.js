@@ -9,3 +9,9 @@ function dotnetStaticInvocation() {
         });
 
 }
+
+function dotnetInstanceInvocation(dotnetHelper) {
+    //alert('we are here');
+    dotnetHelper.invokeMethodAsync("IncrementCount");
+    //alert('we are here2');
+}
