@@ -1,0 +1,24 @@
+﻿<!-- // typeparam  makes the component generic -->
+@typeparam TItem
+
+
+
+
+
+
+
+
+
+
+
+@code {
+    [Parameter] public RenderFragment NullTemplate { get; set; }  // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment EmptyTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+
+    [Parameter] public RenderFragment<TItem> HeaderTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment<TItem> BodyTemplate { get; set; }   // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment<TItem> FooterTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+
+    [Parameter] public List<TItem> Lists { get; set; }  // Usedwith @typeparam TItem at the top to make the component generic
+
+}

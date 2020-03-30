@@ -1,0 +1,76 @@
+﻿<!-- // typeparam  makes the component generic -->
+@*<div class="container">*@
+
+
+<div class="card-deck">
+    <div class="card mb-4">
+
+        @if (HeaderTemplate == null)
+        {
+            <h5 class="card-header">
+                @Header
+            </h5>
+        }
+        else
+        {
+            @HeaderTemplate
+        }
+
+        @if (BodyTemplate == null)
+        {
+            @*<img class="card-img-top img-fluid" src="//placehold.it/500x280" alt="Card image cap">*@
+    <div class="card-body">
+        @if (TitleTemplate == null)
+        {
+        <h4 class="card-title">@Title</h4>
+        }
+        else
+        {
+            @TitleTemplate
+        }
+        <p class="card-text">@BodyText</p>
+        <p class="card-text"><small class="text-muted">@FootNote</small></p>
+    </div>
+        }
+        else
+        {
+            @BodyTemplate
+        }
+
+
+        @if (FooterTemplate == null)
+        {
+            <div class="card-footer text-danger">
+                @FooterText
+                <a href="#" class="btn btn-danger">Get Deal</a>
+            </div>
+        }
+        else
+        {
+            @FooterTemplate
+        }
+
+    </div>
+</div>
+@*</div>*@
+
+@*<div class="container">
+        <HeaderTemplate>Header from Template</HeaderTemplate>
+        <BodyTemplate>Body From Template</BodyTemplate>
+        <FooterTemplate>Footer From Template</FooterTemplate>
+    </div>*@
+
+
+@code {
+    [Parameter] public RenderFragment HeaderTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment BodyTemplate { get; set; }   // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment FooterTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment TitleTemplate { get; set; }
+
+    [Parameter] public String Header { get; set; } = "Default Header";
+    [Parameter] public String Title { get; set; } = "1 Card title";
+    [Parameter] public String BodyText { get; set; } = "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.";
+    [Parameter] public String FootNote { get; set; } = "Last updated 3 mins ago";
+    [Parameter] public String FooterText { get; set; } = "2 days left";
+
+}

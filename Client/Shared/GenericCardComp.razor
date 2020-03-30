@@ -1,0 +1,42 @@
+﻿<!-- // typeparam  makes the component generic -->
+@typeparam TItem
+
+
+@if (HeaderTemplate != null)
+{
+    @HeaderTemplate
+}
+else
+{
+    // -- looks like we have null content ( no content passed between MovieList Tag Helper )
+    // --
+    <text>Default Header Template</text>
+}
+
+@if (BodyTemplate != null)
+{
+    @BodyTemplate
+}
+else
+{
+    // -- looks like we have null content ( no content passed between MovieList Tag Helper )
+    // --
+    <text>Default Body Template</text>
+}
+
+@if (FooterTemplate != null)
+{
+    @FooterTemplate
+}
+else
+{
+    // -- looks like we have null content ( no content passed between MovieList Tag Helper )
+    // --
+    <text>Default Footer Template</text>
+}
+
+@code {
+    [Parameter] public RenderFragment<TItem> HeaderTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment<TItem> BodyTemplate { get; set; }   // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment<TItem> FooterTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+}

@@ -1,1 +1,22 @@
 https://help.github.com/en/github/using-git/ignoring-files
+
+https://docs.microsoft.com/en-us/aspnet/core/blazor/components?view=aspnetcore-3.1
+
+
+https://blazor.radzen.com/datagrid-filter-template
+
+
+
+            @*<HeaderTemplate>Header from Template</HeaderTemplate>
+        <BodyTemplate>Body From Template</BodyTemplate>
+        <FooterTemplate>Footer From Template</FooterTemplate>*@
+
+
+    [Parameter] public RenderFragment HeaderTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment BodyTemplate { get; set; }   // Use Templates when you have more than 1 RenderFragement
+    [Parameter] public RenderFragment FooterTemplate { get; set; } // Use Templates when you have more than 1 RenderFragement
+    Header = "Default Header";
+    Title = "1 Card title";
+    BodyText = "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.";
+    FootNote = "Last updated 3 mins ago";
+    FooterText  = "2 days left";

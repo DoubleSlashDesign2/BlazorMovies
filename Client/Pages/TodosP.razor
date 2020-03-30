@@ -1,0 +1,16 @@
+﻿@page "/todosp"
+
+<h1>Todo Sample</h1>
+
+<TodoList Todos="@todos"/>
+
+@*<TodoItem Text="Watch videos about Blazor" />
+<TodoItem Text="Watch videos about Blazor " Done="true"/>*@
+
+@code {
+    IList<TodoModel> todos = new List<TodoModel>
+    {
+        new TodoModel {Text = "aaa"},
+        new TodoModel {Text = "bbb"}
+    };
+}
