@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static BlazorMovies.Client.Shared.MainLayout;
 
 namespace BlazorMovies.Client.Pages
 {
@@ -14,9 +15,12 @@ namespace BlazorMovies.Client.Pages
     {
         // -- instead of the @inject directive which is used in the razor pages we use the 
         // -- [Inject] attribute and make the item a property to accomplish the same as in the razor pages
-        [Inject] SingletonService singleton { get; set; } 
+        [Inject] SingletonService singleton { get; set; }
         [Inject] TransientService transient { get; set; }
         [Inject] IJSRuntime js { get; set; }
+        //[CascadingParameter(Name = "Color")] public string Color {get; set;}
+        //[CascadingParameter(Name = "Size")] public string Size {get; set;}
+        [CascadingParameter] public AppState appState { get; set; }
 
         private List<Movie> movieLists;
 

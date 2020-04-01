@@ -1,24 +1,25 @@
 ﻿@page "/"
 @inject SingletonService singleton
 @inject IRepository repository
+@using static BlazorMovies.Client.Shared.MainLayout;
 
-    <div>
-        <h3>Movies List</h3>
+<div>
+    <h3>Movies List</h3>
 
-        <p>Singleton count: @singleton.Value</p>
+    <p style="color: @appState.Color">Singleton count: @singleton.Value</p>
 
-        <!-- Blazor Component -->
-        @*<MovieList MoviesList="movieLists" />*@
+    <!-- Blazor Component -->
+    @*<MovieList MoviesList="movieLists" />*@
 
-        <MovieList  MoviesList="movieLists" />
+    <MovieList MoviesList="movieLists" />
 
 
-    </div>
+</div>
 
 <button @onclick="AddNewMovie">Add new Movie</button>
 
 @code{
-
+    [CascadingParameter]  public AppState appState { get; set; }
 
     //private List<Movie> movieLists; // Causes Null template or null template tag helper to display
     private List<Movie> movieLists = new List<Movie>(); // Causes Empty template or Empty template tag helper to display

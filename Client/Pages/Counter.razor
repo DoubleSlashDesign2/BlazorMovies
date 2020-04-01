@@ -3,9 +3,10 @@
 @inject TransientService transient*@
 
 
-<h1>Counter</h1>
+<h1 style="color: @appState.Color">Counter</h1>
 
-<p>Current count: @currentCount</p>
+
+<p style="color: @appState.Color; font-size: @appState.Size">Current count: @currentCount</p>
 <p>Singleton count: @singleton.Value</p>
 <p>Transient count: @transient.Value</p>
 
@@ -17,6 +18,23 @@
 
 @*<MovieList MoviesList="movieLists" />*@
 
+
+<div style="display:flex">
+    <div style="width:150px">
+        <select @bind="appState.Color" class="form-control" style="margin-top: 15px">
+            <option value="Green">Green</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+        </select>
+    </div>
+    <div style="width:150px">
+        <select @bind="appState.Size" class="form-control" style="margin-top: 15px">
+            <option value="12px">12px</option>
+            <option value="16px">16px</option>
+            <option value="18px">18px</option>
+        </select>
+    </div>
+</div>
 
 
 @code {
